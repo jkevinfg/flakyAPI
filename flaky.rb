@@ -38,7 +38,7 @@ class FlakyAPI
     begin 
       File.open(ruta, "w") do |file|
         response = self.class.get(url)
-        photo = JSON.parse(response.body)
+        photo =response.body
         file.write(photo)
       end
     rescue
@@ -59,5 +59,5 @@ end
 flaky = FlakyAPI.new()
 
 
-puts flaky.house_page(3.5)
+puts flaky.dowloands(10)
 
