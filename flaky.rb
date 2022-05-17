@@ -6,7 +6,7 @@ class FlakyAPI
   base_uri 'https://app-homevision-staging.herokuapp.com/api_project'
 
   def house_page(page) 
-    return "method house_page receive integers" unless (5.is_a?Integer &&  page > 0)
+    return "method house_page receive integers" unless ( page.is_a?Integer and page > 0)
     begin
       response = self.class.get("/houses",  { query: {  page: page } })
       body = JSON.parse(response.body,symbolize_names: true)
@@ -59,5 +59,5 @@ end
 flaky = FlakyAPI.new()
 
 
-puts flaky.house_page(6)
+puts flaky.house_page(3.5)
 
