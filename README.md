@@ -1,6 +1,6 @@
 # flakyapi
 project promitia
 
-Consumir API : https://app-homevision-staging.herokuapp.com/api_project
+Consumir API : https://app-homevision-staging.herokuapp.com/api_project/houses
 - Mostrar 10 páginas
 - Descargar imagenes 
